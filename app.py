@@ -9,11 +9,11 @@ import os
 app = Flask(__name__)
 
 # Load your model and other dependencies
-scaler = joblib.load("C:/Users/User/Desktop/Mangimind Data Science Bootcamp/Sarcopenia_Project/scaler.joblib")
-model = tf.keras.models.load_model("C:/Users/User/Desktop/Mangimind Data Science Bootcamp/Sarcopenia_Project/best_model_with_selected_features.h5")
+scaler = joblib.load("C:/Users/User/Desktop/Mangimind Data Science Bootcamp/Sarcopenia_Identification/scaler.joblib")
+model = tf.keras.models.load_model("C:/Users/User/Desktop/Mangimind Data Science Bootcamp/Sarcopenia_Identification/best_model_with_selected_features.h5")
 
 # Load top features
-with open("C:/Users/User/Desktop/Mangimind Data Science Bootcamp/Sarcopenia_Project/top_features.json", "r") as file:
+with open("C:/Users/User/Desktop/Mangimind Data Science Bootcamp/Sarcopenia_Identification/top_features.json", "r") as file:
     top_features = json.load(file)
 
 @app.route('/')
