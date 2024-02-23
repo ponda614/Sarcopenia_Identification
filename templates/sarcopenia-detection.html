@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <img src="{{ url_for('static', filename='ai-healthcare-robot-high-resolution-logo.png') }}" alt="Logo" class="logo">
+
+    </div>
+    <div class="home-tab-container">
+        <a href="/" class="home-tab">Home</a>
+    </div>  
+    <div class="title">
+        <h2>Sarcopenia Detection Test</h2>
+    </div>
+    <div class="content-container">
+        <form action="/predict-sarcopenia" method="post" id="sarcopenia-form" class="form-sarcopenia">
+            Star: <input type="text" name="Star"><br>
+            Gender_M: <input type="text" name="Gender_M"><br>
+            GS.1: <input type="text" name="GS.1"><br>
+            CST: <input type="text" name="CST"><br>
+            Statin_pravastatin: <input type="text" name="Statin_pravastatin"><br>
+            <input type="submit" value="Sarcopenia Detection">
+        </form>
+        <div id="prediction-result"></div>
+    </div>
+    <script>
+        document.getElementById('sarcopenia-form').onsubmit = function (event) {
+            event.preventDefault(); // Prevent the default form submission
+    
+            var formData = new FormData(this);
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/predict-sarcopenia', true);
+            xhr.onload = function () {
+                // Display the results
+                if (xhr.status === 200) {
+                    var predictionResult = document.getElementById('prediction-result');
+                    predictionResult.innerText = 'Prediction: ' + xhr.responseText;
+    
+                    // Add the class to show the border
+                    predictionResult.classList.add('has-content');
+                } else {
+                    document.getElementById('prediction-result').innerText = 'Error in prediction';
+                }
+            };
+            xhr.send(formData);
+        };
+    </script>
+    
+      
+
+</body>
+</html>

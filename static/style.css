@@ -1,0 +1,347 @@
+.logo {
+    width: auto;
+    height: 300px; /* Adjust as needed for larger screens */
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        background-color: white; /* Set a solid background color */
+        width: auto;
+        height: auto;
+    }
+}
+.title {
+    text-align: center; /* Centers the text */
+    padding: 30px 50px; /* Adjust padding as needed */
+    margin: 1px auto; /* Ensures the element is centered horizontally */
+    width: 20%; /* Adjust the width as needed */
+    border-radius: 4px; /* Rounded corners */
+    display: flex; /* Flexbox display */
+    justify-content: center; /* Center content horizontally in a flex container */
+    align-items: center; /* Center content vertically in a flex container */
+    background-color: white; /* Background color */
+    border: 1rem solid #56bd2e; /* Border style */
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    color: #56bd2e; /* Text color */
+    font-weight: bold;
+}
+
+.title h2 {
+    margin: 0; /* Removes default margin from h2 */
+    color: #56bd2e; /* Text color */
+}
+
+.content-container {
+    margin-top: auto; /* Adjust based on the actual height of your navbar */
+    font-family: Georgia, serif;
+    /* Other styling as needed */
+}
+
+
+.navbar {
+    background-color: white; /* Set the background color to forest green */
+    font-size: 50px;
+    font-family: Georgia, serif;
+    text-align: center; /* Center the text horizontally */
+    color: rgb(232, 250, 215); /* Set text color to white */
+    margin:0;
+    line-height: 50px; /* Increase the line-height to make it plumper */
+    border-bottom: 1em solid #56bd2e
+}
+
+body {
+    background-image: url("/static/healthcare_ai.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top 350px; /* Adjust the '100px' based on the estimated navbar height */
+    margin: 0;
+}
+
+.main {
+    margin-top: 30px;
+}
+
+.tab-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.tab {
+    display: inline flex;
+    background-color: rgb(255, 255, 255); /* Your color choice */
+    color:#56bd2e;
+    padding: 30px 50px;
+    margin: 1px;
+    border: 1rem solid  #56bd2e;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.tab:hover {
+    background-color: white; /* Slightly darker for hover effect */
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------- */
+
+/* --- Sarcopenia Detection Form Styling --- */
+/* Centering the heading inside content-container */
+.content-container h2 {
+    text-align: center; /* Center the text */
+    margin: 0 auto; /* Center the element */
+    width: 100%; /* Ensuring it takes the full width */
+    color:#56bd2e;
+    background-color: white;
+    margin:0;
+    line-height: 50px; /* Increase the line-height to make it plumper */
+    border-radius: 8px; /* Optional: Rounded corners for the form */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow */
+    background-position: center top 350px;
+    padding: 15px;
+    font-weight: bold;
+}
+.form-sarcopenia {
+    max-width: 600px; /* Set a max width for the form */
+    margin: 0 auto; /* Center the form */
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px; /* Optional: Rounded corners for the form */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow */
+}
+
+.form-sarcopenia label,
+.form-sarcopenia input[type="text"],
+.form-sarcopenia input[type="submit"] {
+    display: block; /* Ensure these elements are block-level */
+    margin: 0 auto; /* Center align these elements */
+    text-align: left; /* Align the text to the left within the elements */
+    max-width: 100%; /* Ensure they don't exceed their container's width */
+}
+
+.form-sarcopenia label {
+    margin-bottom: 5px; /* Space below each label */
+    font-weight: bold; /* Make labels bold */
+}
+
+.form-sarcopenia input[type="text"] {
+    width: calc(100% - 16px); /* Full width minus padding */
+    padding: 8px;
+    margin-bottom: 15px; /* Space below each input */
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Rounded corners for input fields */
+}
+
+.form-sarcopenia input[type="submit"] {
+    background-color: #56bd2e; /* Match your theme color */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; /* Cursor changes to hand symbol on hover */
+    font-size: 18px; /* Larger font size for submit button */
+    font-weight: bold;
+    font-family: Georgia, serif;
+}
+
+.form-sarcopenia input[type="submit"]:hover {
+    background-color: #56bd2e; /* Darker shade on hover */
+}
+
+#prediction-result {
+    text-align: center; /* Center the text inside the div */
+    position: fixed; /* Fix the position to the bottom of the page */
+    left: 50%; /* Start at 50% of the viewport width */
+    transform: translateX(-50%); /* Shift left by 50% of its own width */
+    bottom: 1; /* Set at the bottom */
+    padding: 10px 50px; /* Add some padding */
+    border: 0; /* Initially, set the border width to 0 */
+    box-shadow: 0 -5px 10px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow */
+    color: #56bd2e; /* Text color */
+    font-family: Georgia, serif; 
+}
+#prediction-result.has-content {
+    border: 1rem solid #56bd2e; /* When there's content, set the border width */
+    background-color: white; /* Background color */
+    font-family: Georgia, serif;
+    font-size: 25px;
+    transition: background-color 0.3s;
+    color: #56bd2e; /* Text color */
+    font-weight: bold;
+}
+
+.home-tab {
+    display: inline-block; /* Align with other inline elements */
+    margin: 10px; /* Adjust as needed */
+    padding: 20px 15px; /* Padding for the tab */
+    background-color: white; /* Background color */
+    color: #56bd2e; /* Text color */
+    text-decoration: none; /* Remove underline from link */
+    border-radius: 4px; /* Rounded corners */
+    border: 1rem solid #56bd2e; /* Your border styling */
+    font-family: Georgia, serif;
+    /* Add any additional styling as per your design */
+}
+
+.home-tab:hover {
+    background-color: white; /* Darker shade on hover for visual feedback */
+}
+.home-tab-container {
+    text-align: left; /* Center the content */
+    margin: auto; /* Apply auto margin to center the block */
+    width: 100%; /* Full width to allow centering */
+    font-family: Georgia, serif;
+    font-size: 20px; /* Larger font size for submit button */ 
+ }
+/* -------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------- */
+
+/* --- Styles for Sarcopenia Patient Analysis --- */
+#sarcopenia-analysis .logo {
+    width: auto;
+    height: 300px; /* Adjust as needed for larger screens */
+}
+
+@media screen and (max-width: 768px) {
+    #sarcopenia-analysis .logo {
+        background-color: white; /* Set a solid background color */
+        width: auto;
+        height: auto;
+    }
+}
+
+#sarcopenia-analysis .content-container {
+    margin-top: auto; /* Adjust based on the actual height of your navbar */
+    /* Other styling as needed */
+}
+
+.dashboard-container {
+    max-width: 2000px; /* Adjust the max-width as needed */
+    margin: 20px auto; /* Adds space on the top and bottom, centers horizontally */
+    text-align: center; /* Centers the content inside the container */
+}
+
+.dashboard-container h2 {
+    text-align: center; /* Center the text */
+    margin: 0 auto; /* Center the element */
+    width: 100%; /* Ensuring it takes the full width */
+    color:#56bd2e;
+    background-color: white;
+    margin:0;
+    line-height: 50px; /* Increase the line-height to make it plumper */
+    border-radius: 8px; /* Optional: Rounded corners for the form */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow */
+    background-position: center top 350px;
+    padding: 15px;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------- */
+
+/* --- Styles for Educational Resources --- */
+.pdf-section {
+    margin: 20px;
+    text-align: center; /* Center align the title and PDF */
+}
+
+.pdf-section h3 {
+    display: inline flex;
+    background-color: white; /* Your color choice */
+    color:#56bd2e;
+    padding: 30px 50px;
+    margin: 51px;
+    border: 1rem solid  #56bd2e;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+
+
+}
+
+.pdf-container {
+    width: 30%; /* Adjust the width as needed */
+    height: 500px; /* Adjust the height as needed */
+    margin: 0 auto; /* Center the container */
+    overflow-y: auto; /* Add vertical scrollbar if content overflows */
+    border: 1px solid #ccc; /* Optional border */
+}
+
+
+.pdf-container iframe {
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height of the container */
+}
+
+.pdf-wrapper {
+    display: flex; /* Enables Flexbox */
+    justify-content: space-around; /* Spacing between the PDFs */
+    align-items: flex-start; /* Aligns items at the start of the container */
+}
+
+.pdf-section {
+    flex: 1; /* Each section takes equal amount of space */
+    margin: 10px; /* Optional margin for spacing */
+}
+
+.pdf-container {
+    width: 100%; /* Adjust width as needed, e.g., 100% of the parent .pdf-section */
+    height: 600px; /* Adjust height as needed */
+    overflow-y: auto; /* Adds vertical scrollbar if content overflows */
+    border: 1px solid #ccc; /* Optional border */
+}
+
+.pdf-container iframe {
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height of the container */
+}
+
+
+/* -------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------- */
+
+/* --- Styles for About --- */
+.about-section {
+    max-width: 800px; /* Limit the width for better readability */
+    margin: 40px auto; /* Center the section and add vertical spacing */
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    font-family: 'Arial', sans-serif; /* You can choose a different font */
+}
+
+.about-section h1, .about-section h2 {
+    color: #333333; /* Dark grey color for headings */
+    margin-bottom: 20px; /* Spacing after headings */
+}
+
+.about-section h1 {
+    font-size: 28px; /* Larger font size for main heading */
+    font-weight: bold;
+}
+
+.about-section h2 {
+    font-size: 24px; /* Slightly smaller font size for subheadings */
+    font-weight: bold;
+}
+
+.about-section p {
+    font-size: 16px; /* Comfortable reading size for text */
+    line-height: 1.6; /* Line height for readability */
+    color: #666666; /* Lighter grey color for text */
+    margin-bottom: 20px; /* Spacing after paragraphs */
+    font-weight: bold;
+}
+
+.about-section ul {
+    list-style: disc; /* Styling for bullet points */
+    margin-left: 20px; /* Indent for the list */
+    margin-bottom: 20px; /* Spacing after list */
+}
+
+.about-section ul li {
+    margin-bottom: 10px; /* Spacing between list items */
+}

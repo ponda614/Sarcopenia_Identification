@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    
+    <div class="navbar">
+        <img src="{{ url_for('static', filename='ai-healthcare-robot-high-resolution-logo.png') }}" alt="Logo" class="logo">
+    </div>
+    <div class="title">
+        <h2>Educational Resources</h2>
+    </div>
+    <div class="home-tab-container">
+        <a href="/" class="home-tab">Home</a>
+    </div>
+    <div class="content-container">
+        
+       
+    <!-- PDF Wrapper -->
+    <div class="pdf-wrapper">
+        <!-- PDF Section 1 -->
+        <div class="pdf-section">
+            <h3>Sarcopenia Assessment in Hypertension Study</h3>
+            <div class="pdf-container">
+                <iframe src="{{ url_for('static', filename='Sarcopenia Assessment in Hypertension_The SARAH Study.pdf') }}" style="border:none;">
+                    This browser does not support PDFs. Please download the PDF to view it: <a href="{{ url_for('static', filename='Sarcopenia Assessment in Hypertension_The SARAH Study.pdf') }}">Download PDF</a>.
+                </iframe>
+            </div>
+        </div>
+
+        <!-- PDF Section 2 -->
+        <div class="pdf-section">
+            <h3>Lifestyle and Sarcopenia—Etiology, Prevention, and Treatment</h3>
+            <div class="pdf-container">
+                <iframe src="{{ url_for('static', filename='Lifestyle and Sarcopenia—Etiology, Prevention, and Treatment.pdf') }}" style="border:none;">
+                    This browser does not support PDFs. Please download the PDF to view it: <a href="{{ url_for('static', filename='Lifestyle and Sarcopenia—Etiology, Prevention, and Treatment.pdf') }}">Download PDF</a>.
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+        <div id="prediction-result"></div>
+    </div>
+</body>
+</html>

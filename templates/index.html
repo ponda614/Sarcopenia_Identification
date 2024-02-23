@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <div class="navbar">
+        <img src="{{ url_for('static', filename='ai-healthcare-robot-high-resolution-logo.png') }}" alt="Logo" class="logo">
+    </div>
+</head>
+<body>
+    <!-- Container for main content -->
+    <div class="content-container">
+        <div class="tab-container">
+            <a href="/sarcopenia-detection" class="tab">Sarcopenia Detection Test</a>
+            <a href="/Sarcopenia-Patient-Analysis" class="tab">Sarcopenia Patient Analysis</a>
+            <a href="/educational-resources" class="tab">Educational Resources</a>
+            <a href="/about" class="tab">About</a>
+        </div>
+    </div>
+</body>
+</html>
